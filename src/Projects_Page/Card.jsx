@@ -2,6 +2,12 @@ import cardStyle from './Project.module.css';
 
 function Card({image, header, description, tech1, tech2, tech3, link, showState}){
     const goToProject = () => {
+
+        if(link === "null") {
+            alert("This project is currently unavailable.");
+            return;
+        }
+
         window.open(link);
     }
 

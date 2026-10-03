@@ -78,7 +78,7 @@ function Project() {
 
           <Card image={soc_33} header="33 Society" 
           description="A commissioned website for a start-up group titled 33 Society. As the back-end developer, I implemented and designed the website's back-end functionality and database structure while collaborating with the front-end designer." 
-          tech1="React.TS" tech2="Tailwind" link="https://marcusureta.dev"
+          tech1="React.TS" tech2="Tailwind" link="null"
           showState= {filter === 'all' || filter === 'websites' || filter === 'best'}/>
 
           <Card image={mu} header="MU Machine" 
