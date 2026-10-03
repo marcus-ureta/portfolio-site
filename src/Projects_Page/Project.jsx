@@ -9,14 +9,11 @@ import Card from './Card.jsx';
 // HEADER IMAGES
 import mm_boy from '../assets/marshmallow_boy.svg';
 import js_cpa from '../assets/jigsaw_cpa.svg';
-import new_pf from '../assets/new_portfolio.svg';
 import is from '../assets/inventory_system.svg';
 import pw from '../assets/product_website.svg';
 import gc from '../assets/grades_calc.svg';
 import pc from '../assets/pawcation_app.svg';
-import vd from '../assets/valentines.svg';
 import calc from '../assets/calculator.svg';
-import jsPA from '../assets/prototype_jsp.svg';
 import tt from '../assets/truth_table.svg';
 import nn from '../assets/neural_network.svg';
 import cai from '../assets/collective_ai.svg';
@@ -25,6 +22,10 @@ import rai from '../assets/rai.svg';
 import mps from '../assets/mps.svg';
 import vd2026 from '../assets/vd2026.svg';
 import tl from '../assets/tl.svg';
+
+import mb_site from '../assets/mb_site.webp';
+import ps_site from '../assets/personal_site.webp';
+import soc_33 from '../assets/33_society.webp';
 
 function Project() {
 
@@ -45,8 +46,8 @@ function Project() {
         <div className={pageStyle.tabList}>
           <button className={pageStyle.bestButton + ' ' + `${filter === 'best' ? pageStyle.selected : undefined}`} onClick={() => handleFilter('best')} >⭐ Best Works (4)</button>
           <button className={`${filter === 'all' ? pageStyle.selected : undefined}`} onClick={() => handleFilter('all')}>🖥️ All (18)</button>
-          <button className={`${filter === 'websites' ? pageStyle.selected : undefined}`} onClick={() => handleFilter('websites')}>🌐 Websites (5)</button>
-          <button className={`${filter === 'programs' ? pageStyle.selected : undefined}`} onClick={() => handleFilter('programs')}>⚙️ Programs (12)</button>
+          <button className={`${filter === 'websites' ? pageStyle.selected : undefined}`} onClick={() => handleFilter('websites')}>🌐 Websites (6)</button>
+          <button className={`${filter === 'programs' ? pageStyle.selected : undefined}`} onClick={() => handleFilter('programs')}>⚙️ Programs (11)</button>
         </div>
 
         <div className={pageStyle.cards}>
@@ -59,21 +60,26 @@ function Project() {
             description="An AI-driven R&D prototype where players haggle with personality-driven chatbots, built for BCE Productions (TVEC). As lead developer, I handled programming, systems design, AI research, and technical documentation." 
             tech1="C#" tech2="Unity" link="https://drive.google.com/file/d/10BDxmyrq7sYMNheS1U0Azgtr3e_cfYYm/view"
             showState= {filter === 'all' || filter === 'programs' || filter === 'best'} />
-            
+
+          <Card image={ps_site} header="Personal Site" 
+          description="My own personal site built to act as my personal hub and online presence. As the sole developer, I designed the entire site and implemented all features using React, Typescript, Tailwind, and Firebase." 
+          tech1="React.TS" tech2="Tailwind" link="https://marcusureta.dev"
+          showState= {filter === 'all' || filter === 'websites' || filter === 'best'}/>
+
           <Card image={js_cpa} header="Jigsaw Coding Application" 
             description="An eductional jigsaw puzzle game where players solve puzzles through code to learn C#. I designed and implemented the game's custom scripting language and contributed to the UI design." 
             tech1="C#" tech2="Unity" link="https://drive.google.com/file/d/1wWsPa6-_yvFDUQLTBhGtKKnvSpHpam4i/view"
             showState= {filter === 'all' || filter === 'programs' || filter === 'best'} />
-
-          <Card image={new_pf} header="Portfolio Site" 
-            description="A redesigned portfolio site showcasing my previous work, skills, and abilities to potential clients. As the sole full-stack developer, I built and designed the entire site from scratch with a focus on interactivity." 
-            tech1="React" tech2="JS" link="https://marcusureta-portfolio.vercel.app/"
-            showState= {filter === 'all' || filter === 'websites' || filter === 'best'}/>
-
+            
           <Card image={rai} header="Robots Are Invading" 
             description="A fast-paced FPS game where you fight robots invading the world. As project lead, I managed a team of 10 artists, programmers, level and sound designers while implementing the game's core gameplay systems." 
             tech1="C#" tech2="Unity" link="https://drive.google.com/file/d/1M0u0XIVlYNdjKa01e8Z4hhtoO0SACrQS/view"
             showState= {filter === 'all' || filter === 'programs'}/>
+
+          <Card image={soc_33} header="33 Society" 
+          description="A commissioned website for a start-up group titled 33 Society. As the back-end developer, I implemented and designed the website's back-end functionality and database structure while collaborating with the front-end designer." 
+          tech1="React.TS" tech2="Tailwind" link="https://marcusureta.dev"
+          showState= {filter === 'all' || filter === 'websites' || filter === 'best'}/>
 
           <Card image={mu} header="MU Machine" 
           description="An Arduino-based game console featuring three fully playable games. I independently designed, engineered, and programmed the entire system, from hardware integration to game logic." 
@@ -89,7 +95,17 @@ function Project() {
             description="A Windows Presentation Foundation application for managing inventory, allowing users to view, add, and remove items. As the sole developer, I designed and developed the entire application from scratch." 
             tech1="C#" tech2="WPF" link="https://drive.google.com/drive/folders/1zwt6VIO2fI8EtXs3CNvMtFtAEvwXpRLY"
             showState= {filter === 'all' || filter === 'programs'}/>
-          
+
+          <Card image={vd2026} header="Valentine's Day Site (2026)" 
+          description="A Valentine's Day web application created in a single day with a focus on simplicity and easy shareability for users. As the sole developer of the project, I was responsible for the programming and UI design." 
+          tech1="React" tech2="JS" link="https://your-special-valentines-day-2026.vercel.app/"
+          showState= {filter === 'all' || filter === 'websites'}/>
+
+          <Card image={mb_site} header="Marshmallow Boy Site" 
+            description="Built in one day as an assignment for a DLSU organization exam. I was responsible for designing and implementing the entire website with mobile responsiveness in mind using HTML, CSS, and JS." 
+            tech1="JS" tech2="HTML/CSS" link="https://tls-ureta.vercel.app"
+            showState= {filter === 'all' || filter === 'websites'}/>
+
           <Card image={pw} header="Product Site" 
             description="A promotional website for a product I made called 'RootTap' featuring a sign-up form. As the sole full-stack developer, I implemented a fully functional, and visually appealing site from scratch using HTML, CSS, and JS." 
             tech1="JS" tech2="HTML/CSS" link="https://github.com/PinGEm/Web-Design-QA"
@@ -105,26 +121,10 @@ function Project() {
             tech1="C#" tech2="WinForm" link="https://github.com/PinGEm/Pawcation"
             showState= {filter === 'all' || filter === 'programs'}/>
 
-
-          <Card image={vd2026} header="Valentine's Day Site (2026)" 
-            description="A Valentine's Day web application created in a single day with a focus on simplicity and easy shareability for users. As the sole developer of the project, I was responsible for the programming and UI design." 
-            tech1="React" tech2="JS" link="https://your-special-valentines-day-2026.vercel.app/"
-            showState= {filter === 'all' || filter === 'websites'}/>
-
-          <Card image={vd} header="Valentine's Day Site (2025)" 
-            description="A small web-project made for Valentine's Day built for fun featuring smooth CSS transitions. My role as the sole full-stack developer was to design the user-interface along with implementation of core features." 
-            tech1="JS" tech2="HTML/CSS" link="https://github.com/PinGEm/Valentines-Day-Site/tree/main"
-            showState= {filter === 'all' || filter === 'websites'}/>
-
           <Card image={calc} header="Calculator Site" 
             description="A responsive calculator webpage supporting full PEMDAS operations through an interactive and user-friendly interface. As the sole full-stack developer, I designed the UI and developed all features using PhP." 
             tech1="PhP" tech2="CSS" link="https://github.com/PinGEm/Web-Design--Q4_PT1---Calculator"
             showState= {filter === 'all' || filter === 'websites'}/>
-
-          <Card image={jsPA} header="Prototype of Jigsaw Code" 
-            description="A prototype of the 'Jigsaw Coding Software,' built in just one day. The puzzle is solved using code blocks instead of typing code. As the sole developer, I designed the interface and implemented the core functionality." 
-            tech1="C#" tech2="WinForm" link="https://github.com/PinGEm/Prototype-WorkshopPainting-Application"
-            showState= {filter === 'all' || filter === 'programs'}/>
 
           <Card image={cai} header="Collective AI Program" 
             description="A program that combines both a neural network and swarm intelligence AI to compute the most efficient maze path throughout several generations. I served as the sole developer, responsible for the swarm intelligence logic." 
